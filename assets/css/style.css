@@ -1,0 +1,101 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --body-font: 'Poppins', sans-serif;
+    /* color */
+   --aarjay-color: 250;
+   --first-color: hsl(var(--aarjay-color), 86%, 56%);
+   --first-color-lighter: hsl(var(--aarjay-color), 86%, 66%);
+   --first-color-darker: hsl(var(--aarjay-color), 82%, 46%);
+   --first-color-second: hsl(var(--aarjay-color), 88%, 56%);
+   --first-color-alt: hsl(var(--aarjay), 16%, 12%);
+   --first-color-up: hsl(var(--aarjay-color), 57%, 43%);
+   --body-color: hsl(var(--aarjay-color), 60%, 99%);
+
+}
+body {
+    font-family: var(--body-font);
+    position: absolute;     
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    padding: 30px;
+    }
+/* header class */
+.herder{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+/* heading class */
+.heading {
+    font-size: 2rem;
+    color: var(--first-color);
+    text-decoration: underline;
+    letter-spacing: 1mm;
+    text-transform: uppercase;
+}
+heading::after :hover{
+    tes
+}
+
+/* aarjay__color class */
+.aarjay__color{
+   text-align: center;
+   font-weight: 600;
+}
+.aarjay__color .p1{
+color: var(--first-color);
+}
+.aarjay__color .p2{
+color: var(--first-color-lighter);
+}
+.aarjay__color .p3{
+    color: var(--first-color-second);
+}
+.aarjay__color .p4{
+    color: var(--first-color-alt);
+}
+.aarjay__color .p5{
+    color: var(--first-color-up);
+}
+.aarjay__color .p6{
+    color: var(--body-color);
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+.aarjay__color .p7{
+    color: var(--first-color-darker);
+}
+
+
+
+
+
+
+/* side scrollbar */
+::-webkit-scrollbar {
+    width: 11px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--first-color-second); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:var(--first-color-lighter);
+}   
