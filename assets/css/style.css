@@ -1,158 +1,231 @@
 /* import font */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* import box-icons  */
+@import url("https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css");
 :root {
-    --body-font: 'Poppins', sans-serif;
-    /* color */
-    --aarjay-color: 250;
-    --first-color: hsl(var(--aarjay-color), 86%, 56%);
-    --first-color-lighter: hsl(var(--aarjay-color), 86%, 66%);
-    --first-color-darker: hsl(var(--aarjay-color), 82%, 46%);
-    --first-color-second: hsl(var(--aarjay-color), 88%, 56%);
-    --first-color-alt: hsl(var(--aarjay), 16%, 12%);
-    --first-color-up: hsl(var(--aarjay-color), 57%, 43%);
-    --body-color: hsl(var(--aarjay-color), 60%, 99%);
-    --body-color-alt: hsl(var(--aarjay-color), 60%, 96%);
+  /* font style  */
+  --body-font: "Poppins", sans-serif;
+  /* color */
+  --aarjay-color: 250;
+  --first-color: hsl(var(--aarjay-color), 86%, 56%);
+  --first-color-lighter: hsl(var(--aarjay-color), 86%, 66%);
+  --first-color-darker: hsl(var(--aarjay-color), 82%, 46%);
+  --first-color-second: hsl(var(--aarjay-color), 88%, 56%);
+  --first-color-alt: hsl(var(--aarjay), 16%, 12%);
+  --first-color-up: hsl(var(--aarjay-color), 57%, 43%);
+  /* body color  */
+  --body-color: hsl(var(--aarjay-color), 60%, 99%);
+  --body-color-alt: hsl(var(--aarjay-color), 60%, 96%);
+}
+* {
+  padding: 0%;
+  margin: 0%;
 }
 
 body {
-    font-family: var(--body-font);
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-    padding: 30px;
+  font-family: var(--body-font);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  padding: 30px;
 }
-
 
 /* header class */
 
 .herder {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--first-color);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--first-color);
 }
-
 
 /* heading class */
 
 .heading {
-    font-size: 1.5rem;
-    color: var(--first-color-alt);
-    /* text-decoration: underline; */
-    letter-spacing: 1mm;
-    text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--first-color-alt);
+  /* text-decoration: underline; */
+  letter-spacing: 1mm;
+  text-transform: uppercase;
 }
 
 .heading:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-
 /* heading::after :hover {} */
-
 
 /* aarjay__color class */
 
 .aarjay__color {
-    text-align: center;
-    font-weight: 600;
+  text-align: center;
+  font-weight: 600;
 }
 
 .aarjay__color .p1 {
-    color: var(--first-color);
+  color: var(--first-color);
 }
 
 .aarjay__color .p2 {
-    color: var(--first-color-lighter);
+  color: var(--first-color-lighter);
 }
 
 .aarjay__color .p3 {
-    color: var(--first-color-second);
+  color: var(--first-color-second);
 }
 
 .aarjay__color .p4 {
-    color: var(--first-color-alt);
+  color: var(--first-color-alt);
 }
 
 .aarjay__color .p5 {
-    color: var(--first-color-up);
+  color: var(--first-color-up);
 }
 
 .aarjay__color .p6 {
-    color: var(--body-color);
-    text-decoration: line-through;
-    text-decoration-color: black;
+  color: var(--body-color);
+  text-decoration: line-through;
+  text-decoration-color: black;
 }
 
 .aarjay__color .p7 {
-    color: var(--first-color-darker);
+  color: var(--first-color-darker);
 }
-
 
 /* modal box create  */
 
 .boxmodal {
-    background-color: var(--body-color-alt);
-    width: 600px;
-    overflow: auto;
-    padding: 10px;
-    border-radius: 0.5rem;
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15);
+  background-color: var(--body-color-alt);
+  width: 600px;
+  overflow: auto;
+  padding: 10px;
+  border-radius: 0.5rem;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .boxmodal code {
-    font-size: 1em;
+  font-size: 1em;
 }
-
 
 /* background image and color */
 
 .backcolor {
-    background-color: aqua;
-    height: 100px;
-    width: 200px;
+  background-color: aqua;
+  height: 100px;
+  width: 200px;
 }
 
 .backimg {
-    background-image: url("https://github.com/aarjaycreation/images/raw/main/portfolio.png");
-    height: 350px;
-    width: auto;
-    background-repeat: no-repeat;
+  background-image: url("https://github.com/aarjaycreation/images/raw/main/portfolio.png");
+  height: 336px;
+  width: auto;
+  background-repeat: no-repeat;
+}
+.backimg {
+  color: aliceblue;
+}
+/* social icon  */
+.social__icons {
+  list-style: none;
+  align-items: center;
+}
+.social__icons i {
+  padding: 1rem;
+}
+.social {
+  border-radius: 0.5rem;
+  font-weight: 1rem;
+  padding: 0.4rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+.social a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--first-color);
+  text-decoration: none;
+}
+.social i {
+  font-size: 1.2rem;
+  margin-right: 0.25rem;
+  width: 2rem;
+}
+/* grad system understans */
+.grid__system {
+  margin: 0%;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 20% auto 20%;
+  grid-template-areas:
+    "hd ar"
+    "as ar"
+    "mn ar"
+    "ft ar";
+}
+.head__area,
+.aside__area,
+.main__area,
+.footer__area {
+  padding: 16px;
+  /* text-align: center; */
+}
+.head__area {
+  grid-area: hd;
+  background-color: aquamarine;
+}
+.aside__area {
+  grid-area: as;
+  background-color: black;
+}
+.main__area {
+  grid-area: mn;
+  background-color: blue;
+}
+.footer__area {
+  grid-area: ft;
+  background-color: brown;
 }
 
+/* ---------------------------
 
-/* side scrollbar */
+          side scrollbar 
 
+  ----------------------------
+*/
 ::-webkit-scrollbar {
-    width: 11px;
+  width: 11px;
 }
-
-
 /* Track */
-
 ::-webkit-scrollbar-track {
-    --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    --webkit-border-radius: 10px;
-    border-radius: 10px;
+  --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  --webkit-border-radius: 10px;
+  border-radius: 10px;
 }
-
-
 /* Handle */
-
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: var(--first-color-second);
-    --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: var(--first-color-second);
+  --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--first-color-lighter);
 }
 
+/* Change Text Selection Color  */
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: var(--first-color-lighter);
+}
 
-/* Handle on hover */
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--first-color-lighter);
+::selection {
+  color: white;
+  background: var(--first-color-lighter);
 }
