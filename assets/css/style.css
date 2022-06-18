@@ -223,7 +223,6 @@ section {
 }
 
 .content {
- 
   grid-area: content;
   background-color: var(--body-color);
   margin: 1rem;
@@ -246,23 +245,268 @@ section {
      ************************
      *****************  */
 
-.btn, .link {
+.btn {
   background-color: var(--first-color-lighter);
   color: var(--body-color);
   border: 1px solid hsl(0, 0%, 70%);
   outline: none;
   cursor: pointer;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   margin: 1rem;
-  border-radius: .3em;
+  border-radius: 0.3em;
   font-size: 1.5rem;
   text-decoration: none;
 }
+.link {
+  background-color: var(--first-color-lighter);
+  color: var(--body-color);
+  border: 1px solid hsl(0, 0%, 70%);
+  outline: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  margin: 1rem;
+  border-radius: 0.3em;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
 
-.btn:hover, .btn:focus,
-.link:hover, .link:focus {
+.btn:hover,
+.btn:focus,
+.link:hover,
+.link:focus {
   background-color: var(--first-color);
   box-shadow: 0 0 5px 0 hsl(0, 0%, 70%);
+}
+/* animated btn  */
+
+.animation__btn {
+  color: var(--body-color);
+  background-color: var(--first-color-lighter);
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  margin: 1rem;
+  border-radius: 0.3em;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.animation__btn:hover {
+  animation: blink 500ms ease-in-out infinite, grow 1s ease-in-out infinite;
+}
+
+.animation__btn:focus {
+  animation: fly-away 500ms ease-in-out forwards;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fly-away {
+  33% {
+    transform: translate(100px, 50px) rotate(30deg) scale(0.9);
+  }
+
+  66% {
+    transform: translate(0, 25px) rotate(90deg) scale(0.75);
+  }
+
+  100% {
+    transform: translate(-100px, -75px) rotate(200deg) scale(0.25);
+  }
+}
+
+/* undertandin animatuon */
+.parent {
+  background-color: blue;
+  height: 500px;
+  width: 500px;
+}
+.child {
+  background-color: blueviolet;
+  height: 150px;
+  width: 150px;
+  transition: 1s;
+}
+.parent:hover .child {
+  transform: translateX(100%);
+}
+/* css rounded corner  */
+
+.corner__one,
+.corner__two,
+.corner__tree,
+.corner__four {
+  height: 200px;
+  width: 200px;
+  margin: 1rem;
+  display: inline-flex;
+}
+.corner__one {
+  background-color: var(--first-color);
+  border-radius: 15px 50px 30px 5px;
+}
+.corner__two {
+  background-color: var(--first-color);
+  border-radius: 15px 50px 30px;
+}
+.corner__tree {
+  background-color: var(--first-color);
+  border-radius: 15px 50px;
+}
+.corner__four {
+  background-color: var(--first-color);
+  border-radius: 15px;
+}
+/* Gradient section  */
+.Gradient {
+  height: 200px;
+  width: 200px;
+  margin: 1rem;
+  display: inline-flex;
+}
+.Gradient__one {
+  background-image: linear-gradient(180deg, red, yellow);
+}
+.Gradient__two {
+  background-image: radial-gradient(red, yellow, green);
+  /* background-image: repeating-linear-gradient(red, yellow, ); */
+}
+.Gradient__tree {
+  background-image: conic-gradient(red, yellow, green);
+}
+/* CSS Shadow Effects */
+.Shadow {
+  color: var(--first-color-up);
+  text-shadow: 2px 2px var(--first-color-lighter);
+}
+.Shadow__box {
+  height: 100px;
+  width: 150px;
+  background-color: black;
+  box-shadow: 10px 10px lightblue;
+}
+/* CSS Text Effects  */
+.text__overflow {
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: clip;
+}
+.text__overflow:hover {
+  overflow: visible;
+}
+.text__wrap {
+  width: 11em;
+  border: 1px solid #000000;
+  word-wrap: break-word;
+}
+.text__break {
+  width: 140px;
+  border: 1px solid #000000;
+  word-break: break-all;
+}
+.text__writing-mode {
+  writing-mode: vertical-rl;
+}
+/* box color change with media query */
+.mq__box {
+  height: 250px;
+  width: 250px;
+  background-color: var(--first-color);
+  border-radius: 15px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .mq__box {
+    background-color: rgb(224, 24, 24);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .mq__box {
+    background-color: rgb(206, 219, 54);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .mq__box {
+    background-color: rgb(75, 214, 33);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .mq__box {
+    background-color: rgb(33, 90, 224);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .mq__box {
+    background-color: rgb(215, 31, 114);
+  }
+}
+/* flax box understandin  */
+.flaxbox__main {
+ 
+  display: flex;
+  justify-content: space-between;
+  
+}
+.flaxbox__item {
+  width: 200px;
+  margin: 11px;
+  height: 200px;
+  border: 3px solid #333;
+  border-radius: 0.3rem;
+  background-color: var(--first-color-lighter);
+  text-align: center;
+  padding: 1rem;
+}
+.flaxbox1 {
+  max-height: 100px;
+  color: var(--body-color);
+}
+.flaxbox2 {
+  max-height: 200px;
+  color: var(--body-color);
+}
+.flaxbox3 {
+  max-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+  order: 2;
+  color: var(--body-color);
 }
 
 /* ---------------------------
